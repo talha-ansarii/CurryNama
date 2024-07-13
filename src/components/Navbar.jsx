@@ -2,6 +2,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,16 +23,16 @@ const Navbar = () => {
   return (
     <div className='w-full h-[86px] bg-[#1C6360] fixed nav-shadow'>
       <div className='md:flex lg:flex hidden w-[90%] m-auto justify-between items-center'>
-        <div>
+        <Link  >
           <img src='/logo.png' alt='logo' className='w-[88px] h-[83px]' />
-        </div>
+        </Link>
         <div className='flex gap-[32px]'>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Home</a>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Menu</a>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Blogs</a>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>FAQ’s</a>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Our Story</a>
-          <a href='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Contact Us</a>
+          <Link tp='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Home</Link>
+          <Link tp='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Menu</Link>
+          <Link tp='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Blogs</Link>
+          <Link tp='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>FAQ’s</Link>
+          <Link to='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Our Story</Link>
+          <Link to='#' className='teko font-[700] text-[20px] leading-[28.66px] text-[#FAB700]'>Contact Us</Link>
 
         </div>
         <div></div>
@@ -66,12 +67,12 @@ const Navbar = () => {
               <div className='absolute menu top-[85px] left-[-150%] w-[105%] bg-[#1C6360] h-[calc(100vh-84px)]'>
               <div className='w-full h-[100%] flex flex-col justify-evenly items-center'>
 
-                <a href='#' className='block teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Home</a>
-                <a href='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Menu</a>
-                <a href='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Blogs</a>
-                <a href='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>FAQ’s</a>
-                <a href='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>Our Story</a>
-                <a href='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center py'>Contact Us</a>
+                <Link to='#' className='block teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Home</Link>
+                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Menu</Link>
+                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Blogs</Link>
+                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>FAQ’s</Link>
+                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>Our Story</Link>
+                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center py'>Contact Us</Link>
               </div>
               </div>
           
