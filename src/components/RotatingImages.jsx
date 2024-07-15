@@ -50,7 +50,7 @@ const RotatingImages = () => {
 
 // console.log(index, index1, index2, index3)
   return (
-    <div className="relative w-full h-[100%] flex justify-end items-center ">
+    <div className="relative w-full h-[100%] flex justify-end items-center  ">
       <div className=' '>
 
         <div className=' w-full h-[100%] '>
