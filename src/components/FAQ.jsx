@@ -4,21 +4,21 @@ import { RxCross2 } from "react-icons/rx";
 import { FaPlus } from "react-icons/fa6";
 
 
-const FAQ = ({ faq, index, toggleFAQ }) => {
+const HomePageFAQ = ({ faq, index, toggleFAQ }) => {
   return (
     
         <div
-      className={`faq ${faq.open ? "open" : ""} my-4 p-2 lg:p-4 bg-[#F1F4F9] rounded-lg `}
+      className={`faq ${faq.open ? "open" : ""} my-0 p-2 lg:p-4  rounded-lg `}
       key={index}
       onClick={() => toggleFAQ(index)}
     >
-      <div className="faq-question montserrat font-[700] text-[10px] leading-[21.6px] md:text-[16px] md:leading-[21.6px] lg:text-[22px] lg:leading-[26.6px] relative  pr-20 transition-all duration-500 ease-out">
+      <div className="faq-question montserrat font-[700] text-[#DA3D12] text-[11px] leading-[15.6px] md:text-[16px] md:leading-[21.6px] lg:text-[18px] lg:leading-[21.94px] relative  pr-20 transition-all duration-500 ease-out border-b-[#1C6360] border-b pb-1 lg:pb-3">
         {faq.question}
-        <span className=" cursor-pointer absolute top-[20px] right-[-10px] transform -translate-y-1/2 w-8 h-8 transition-all duration-500 ease-out">
-          {faq.open ? <div><FaPlus className='rotate-[45deg] text-font-blue ' /></div>  : <FaPlus className='text-font-blue'/>}
+        <span className=" cursor-pointer absolute right-0 bottom-0 lg:top-[15px] lg:right-[0px] transform -translate-y-1/2 lg:w-[20px] lg:h-[20px] w-[10px] h-[10px] md:w-[17px] md:h-[17px] p-[1px] lg:p-1 transition-all duration-500 ease-out bg-[#1C6360] flex  justify-center items-center  rounded-full text-white md:p-[2px] ">
+          {faq.open ? <div><FaPlus className='rotate-[45deg] w-[10px] h-[10px]  md:w-[17px] md:h-[17px]  ' /></div>  : <FaPlus className=' w-[10px] h-[10px]  md:w-[17px] md:h-[17px]'/>}
         </span>
       </div>
-      <div className={`montserrat faq-answer text-[8px] lg:text-[20px] lg:leading-[23.6px] leading-[9.5px] md:text-[14px] md:leading-[16.6px] overflow-hidden transition-all duration-200 ease ${faq.open ? "max-h-screen opacity-100 py-1" : "max-h-0 opacity-0"}`}>
+      <div className={`montserrat faq-answer text-[8px] lg:text-[15px] lg:leading-[17.6px] leading-[9.5px] md:text-[14px] md:leading-[16.6px] overflow-hidden transition-all duration-200 ease ${faq.open ? "max-h-screen opacity-100 py-1" : "max-h-0 opacity-0"}`}>
         {faq.answer}
       </div>
     </div>
@@ -30,4 +30,4 @@ const FAQ = ({ faq, index, toggleFAQ }) => {
 
 
 
-export default FAQ
+export default HomePageFAQ

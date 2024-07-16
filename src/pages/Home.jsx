@@ -31,7 +31,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="md:w-[50%] lg:w-[50%] h-[50%]   md:flex lg:flex justify-end items-end ">
+          <div className="md:w-[50%] lg:w-[50%] h-[50%] lg:pt-10   md:flex lg:flex justify-end items-end ">
             <RotatingImages />
           </div>
         </div>

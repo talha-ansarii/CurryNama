@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FAQ from "./FAQ";
+import HomePageFAQ from "./HomePageFAQ";
 
 const Questions = () => {
   const [faqs, setFaqs] = useState([
@@ -44,7 +44,7 @@ const Questions = () => {
       </div>
       <div className="faqs w-full  mx-auto  p-1 ">
             {faqs.map((faq, index) => (
-              <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+              <HomePageFAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
             ))}
           </div>
           <div className="w-full flex justify-end">
