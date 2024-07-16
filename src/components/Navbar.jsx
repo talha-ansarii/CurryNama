@@ -1,6 +1,5 @@
 
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
+import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -8,25 +7,40 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
 
- const {contextSafe } = useGSAP()
 
- const moveMenu = contextSafe(() => {
-    const tl = gsap.timeline()
-    tl.to('.menu', {x: "140%", duration: 0.5})
-    tl.from('.menu .block', {x: "-500%", duration: 0.5, stagger: 0.1})
- })
+ const containerVariants = {
+  hidden: { x: '100%',
+    transition: {
+      duration: 0.5,
+    },
+   },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
+const linkVariants = {
+  hidden: { opacity: 0, x: 50,
+    transition: {
+      duration: 0.3,
+    }
+   },
+  visible: { opacity: 1, x: 0,
+    transition: {
+      duration: 0.3,
+    }
+   },
+};
 
-
-
-
-
-
- const moveMenuBack = contextSafe(() => {
-    const tl = gsap.timeline()
-    tl.to('.menu', {x: "-150%", duration: 2})
-    
- })
+const imgVariants = {
+  hidden: { opacity: 1, x: 1000 },
+  visible: { opacity: 1, x: 0 },
+};
 
 
 
@@ -50,44 +64,79 @@ const Navbar = () => {
       </div>
 
       <div>
-        <div className='md:hidden relative lg:hidden   flex w-[100%] px-[5%]  m-auto justify-between items-center'>
+        <div className='md:hidden relative lg:hidden  flex w-[100%] px-[5%]  m-auto justify-between items-center'>
           <div>
             <img src='/logo.png' alt='logo' className='w-[88px] h-[83px]' />
           </div>
           <div>
-          <button onClick={() => {
-            setIsOpen((prev) => !prev)
-
-            // console.log(isOpen)
-
-            if(!isOpen) moveMenu()
-            else moveMenuBack()
-          }}>
+          <div >
 
           {!isOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
+            <button
+                onClick={() => {
+                  setIsOpen(true)
+                 
+                }}
+                >
+
+                <svg
+
+                 className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
+            </button>
               ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
+                <button
+                onClick={() => {
+                  setIsOpen(false)
+                 
+                }}
+                >
+                <svg
+                 className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                )}
-          </button>
-          <div >
-            
-              <div className='absolute menu top-[85px] left-[-150%] w-[105%] bg-[#1C6360] h-[calc(100vh-84px)]'>
-              <div className='w-full h-[100%] flex flex-col justify-evenly items-center'>
 
-                <Link to='#' className='block teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Home</Link>
-                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Menu</Link>
-                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -10'>Blogs</Link>
-                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>FAQ’s</Link>
-                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center -4'>Our Story</Link>
-                <Link to='#' className='block teko text-[#FAB700] text-[40px] leading-[28.66px] text-center py'>Contact Us</Link>
-              </div>
-              </div>
+                </button>
+                )}
+          </div>
+          <div >
+
+          <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed  md:hidden bg-[#1C6360] mt-[83px] h-[calc(100vh-0px)] lg:hidden  inset-0 z-[200]  justify-evenly py-[80px] items-start pl-6 text-font-blue inter font-[700] text-[20px] flex flex-col gap-[32px]"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={containerVariants}
+          >
           
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/">
+              Home</Link>
+            </motion.div>
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/">
+              Menu</Link>
+            </motion.div>
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/blogs">Blogs</Link>
+            </motion.div>
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/faq">FAQ’s</Link>
+            </motion.div>
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/ourstory">Our story</Link>
+            </motion.div>
+            <motion.div variants={linkVariants}>
+              <Link className="flex gap-3 teko  text-[#FAB700] text-[40px] leading-[28.66px] text-center -10" to="/contactus">Contact Us</Link>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+            
+             
           </div>
           </div>
           
