@@ -6,6 +6,7 @@ import ContactUs from './pages/ContactUs'
 import Faq from './pages/Faq'
 import OurStory from './pages/OurStory'
 import ListBlogs from './pages/ListBlogs'
+import Blog from './pages/Blog'
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route path='/ourstory' element={<OurStory />} />
         <Route path='/blogs' element={<ListBlogs />} />
+        <Route path="/blogs/:id" element={<Blog />} />
+
        
     </Routes>
   </BrowserRouter>
