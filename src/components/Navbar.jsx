@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className='flex gap-[32px]'>
           <Link to='/' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Home</Link>
           <Link to='#' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Menu</Link>
-          <Link to='#' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Blogs</Link>
+          <Link to='/blogs' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Blogs</Link>
           <Link to='/faq' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>FAQ’s</Link>
           <Link to='/ourstory' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Our Story</Link>
           <Link to='/contactus' className='teko font-[700] hover:text-white transition-all ease-out duration-300 text-[20px] leading-[28.66px] text-[#FAB700]'>Contact Us</Link>
