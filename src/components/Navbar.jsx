@@ -15,10 +15,19 @@ const Navbar = () => {
     tl.to('.menu', {x: "140%", duration: 0.5})
     tl.from('.menu .block', {x: "-500%", duration: 0.5, stagger: 0.1})
  })
+
+
+
+
+
+
+
  const moveMenuBack = contextSafe(() => {
     const tl = gsap.timeline()
     tl.to('.menu', {x: "-150%", duration: 2})
+    
  })
+
 
 
  
@@ -49,7 +58,8 @@ const Navbar = () => {
           <button onClick={() => {
             setIsOpen((prev) => !prev)
 
-            console.log(isOpen)
+            // console.log(isOpen)
+
             if(!isOpen) moveMenu()
             else moveMenuBack()
           }}>
