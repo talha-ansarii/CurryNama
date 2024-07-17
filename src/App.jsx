@@ -7,6 +7,7 @@ import Faq from './pages/Faq'
 import OurStory from './pages/OurStory'
 import ListBlogs from './pages/ListBlogs'
 import Blog from './pages/Blog'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/ourstory' element={<OurStory />} />
         <Route path='/blogs' element={<ListBlogs />} />
         <Route path="/blogs/:id" element={<Blog />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
        
     </Routes>

@@ -123,7 +123,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full bg-[#FFFBF2] pt-10 md:h-[340px] lg:h-[450px] pb-10 hidden md:block lg:block">
+      <div className="w-full bg-[#FFFBF2] pt-10 border border-red-500 pb-10 hidden md:block lg:block">
         <div className="w-[87%]  m-auto pt-4 flex ">
         <div className="w-[50%]">
           <div className="text-[#DA3D12] teko font-[500] text-[24px] leading-[34.39px] md:text-[40px] md:leading-[57.39px]  ">
@@ -155,7 +155,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full mb-10 h-[165px] md:h-[251px] lg:h-[429px] bg-[#B41C55] md:mt-[110px] lg:mt-[150px] ">
+      <div className="w-full mb-10 h-[165px] md:h-[251px] lg:h-[429px] bg-[#B41C55] ">
       <div className="w-full absolute h-[165px] md:h-[251px] lg:h-[429px]   bg-hero-pattern  bgTransparent "></div>
       <div className="w-[87%] m-auto relative">
         <div className="w-[60%] flex flex-col justify-center gap-1 h-[165px] md:h-[251px] lg:h-[429px]">

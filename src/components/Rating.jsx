@@ -56,7 +56,7 @@ tl.to('.star5', {
     <div className='relative h-[103px] flex justify-center items-center mb-[50px] '>
         <div className='montserrat absolute font-[900] md:text-[150px] md:leading-[182.85px] text-[96px] leading-[117.02px] lg:text-[200px] lg:leading-[243.8px
 ] text-[#B41C55]/[30%]'>
-        4.2
+        4.5
         </div>
         <div className='flex gap-1 absolute left-[50%] translate-x-[-50%] bottom-[10px] md:bottom-[-10px] lg:bottom-[-37px]'>
             <img src='/HomePage/star.svg' alt='star' className='star1 w-[15px] h-[14px] md:w-[18px] md:h-[14.68px] lg:w-[35px] lg:h-[32px]' />

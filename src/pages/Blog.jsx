@@ -1,20 +1,40 @@
 import { useParams } from "react-router";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useRef, useState, useTransition } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import BlogCard from "../components/BLogCard";
 import Footer from "../components/Footer";
 
 const Blog = () => {
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = containerRef.current;
+
+    const scrollContent = () => {
+      if (scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight) {
+        scrollContainer.scrollTop = 0;
+      } else {
+        scrollContainer.scrollTop += 1;
+      }
+    };
+
+    const scrollInterval = setInterval(scrollContent, 30);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
+
+
   return (
     <div className="bg-[white] ">
       <Navbar />
-      <div className="flex flex-col md:flex-col w-full  lg:justify-end lg:items-center lg:flex-row">
-      <div className="md:w-full w-full lg:w-[80%] ">
+      <div className="flex flex-col md:flex-col w-full  lg:justify-end lg:items-start lg:flex-row">
+      <div className="md:w-full w-full lg:w-[80%] lg:mt-[86px] lg:h-[calc(100vh-86px)] lg:overflow-y-scroll no-scrollbar   ">
 
       
-        <div className="w-[87%] pt-20 md:pt-[120px] m-auto pb-9">
-          <div className="text-[32px] md:text-[64px] md:leading-[77.6px] flex justify-start pt-[25px]  lg:pt-0 lg:text-[85px] lg:leading-[116px] text-[black] montserrat font-[600]">
+        <div className="w-[87%] pt-20 md:pt-[120px] lg:pt-[50px] m-auto pb-9">
+          <div className="text-[32px] md:text-[64px] md:leading-[77.6px] flex justify-start pt-[25px]  lg:pt-0 lg:text-[85px] lg:leading-[90px] text-[black] montserrat font-[600]">
             <div className="" />
             TITLE
           </div>
@@ -143,14 +163,22 @@ const Blog = () => {
           </div>
         </div>
         </div>
-        <div className="md:hidden lg:flex flex-col mt-[100px] w-[350px] hidden">
+        <div className="md:hidden lg:flex flex-col lg:h-[calc(100vh-86px)] mt-[86px] overflow-y-hidden w-[350px] hidden">
           <div className="montserrat ml-4 pt-4 pb-6 font-[900] lg:text-[32px] lg:leading-[39px] text-[24px] leading-[29px]">
             Latest Posts
           </div>
-          <div className="grid grid-cols-1  gap-4 mb-12">
+          <div ref={containerRef} className=" overflow-y-auto no-scrollbar   gap-4 ">
             <BlogCard />
+            <br/>
+            <br/>
             <BlogCard />
+            <br/>
+            <br/>
+
             <BlogCard />
+            <br/>
+            <br/>
+
           </div>
         </div>
 
@@ -160,7 +188,7 @@ const Blog = () => {
           <div className="montserrat w-full ml-12 pt-4 pb-6 font-[900] md:text-[28px] md:leading-[34px] text-[24px] leading-[29px]">
             Latest Posts
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-1  md:grid-cols-3 gap-4 mb-12">
             <BlogCard />
             <BlogCard />
             <BlogCard />

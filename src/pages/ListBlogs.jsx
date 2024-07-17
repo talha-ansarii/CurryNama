@@ -57,12 +57,12 @@ const ListBlogs = () => {
       <Link to={`/blogs/${latestBlog?.id}`} className="relative">
         <div className="relative pt-24  md:pt-[200px] lg:pt-24 bg-[white]  p-8 flex flex-col justify-start items-center">
          
-          <div className="flex lg:flex-row md:flex-row flex-col mt-[50px]">
-            <img
+          <div className="flex lg:flex-row lg:justify-center lg:items-center  md:flex-row flex-col mt-[50px]">
+          <img
               src={latestBlog?.images[0]}
-              className="z-10 w-[326px] h-[172px] md:w-[371px] md:h-[365px] lg:w-[500px] lg:h-[471px] object-cover rounded-[20px] md:rounded-[20px] lg:rounded-[20px]"
+              className="block md:hidden lg:hidden z-10 w-[326px] h-[172px] md:w-[371px] md:h-[365px] lg:w-[500px] lg:h-[471px] object-cover rounded-t-[20px] md:rounded-r-[20px] lg:rounded-r-[20px]"
             />
-            <div className="flex flex-col justify-start md:gap-10 lg:gap-10 gap-2 pt-10 md:w-[365px] items-start bg-[#1C6360] pl-4 pb-4 lg:pl-[100px] md:pl-[100px] md:ml-[-90px] lg:ml-[-90px] z-0 w-[326px] h-[128px] p-2 lg:w-[477px] lg:h-[471px] md:h-[365px] blog-shadow lg:rounded-[20px] rounded-b-[20px] md:rounded-[20px] mt-[-20px] md:mt-[0px] lg:mt-[0px]">
+            <div className="flex flex-col justify-start md:gap-10 lg:gap-10 gap-2 pt-10 md:w-[365px] items-start bg-[#1C6360] pl-4 pb-4 lg:pl-[30px] md:pl-[30px] md:ml-[0px] lg:ml-[0px] z-0 w-[326px] h-[128px] p-2 lg:w-[477px] lg:h-[471px] md:h-[365px] blog-shadow lg:rounded-l-[20px] rounded-b-[20px] md:rounded-l-[20px] lg:rounded-br-[0px] md:rounded-br-[0px] mt-[-20px] md:mt-[0px] lg:mt-[0px]">
               <div className="text-[20px] pt-[0px] md:leading-[29px] lg:leading-[50px] md:pt-0 lg:pt-0 md:text-[24px] lg:text-[40px] text-[white] montserrat font-[600]">
                 <div
                   dangerouslySetInnerHTML={{ __html: latestBlog?.title }}
@@ -87,6 +87,10 @@ const ListBlogs = () => {
               </button>
               </div>
             </div>
+            <img
+              src={latestBlog?.images[0]}
+              className="hidden md:block lg:block z-10 w-[326px] h-[172px] md:w-[371px] md:h-[365px] lg:w-[500px] lg:h-[471px] object-cover rounded-r-[20px] md:rounded-r-[20px] lg:rounded-r-[20px]"
+            />
           </div>
 
         </div>
