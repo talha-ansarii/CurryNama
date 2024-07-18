@@ -93,44 +93,44 @@ const Footer = () => {
               Company
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 Home
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 Menu
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
-              <a
-                href="#"
+              <Link
+                to="/blogs"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 Blogs
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
-              <a
-                href="#"
+              <Link
+                to="/faq"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 FAQs
-              </a>
+              </Link>
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
-              <a
-                href="#"
+              <Link
+                to="/outstory"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 Our Story
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -147,27 +147,27 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex justify-start text-[11px] items-center gap-x-6">
-            <a
-              href="#"
+            <Link
+              to="/privacypolicy"
               className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
             >
               Terms & Services
-            </a>
+            </Link>
           </div>
           <div className="flex justify-start text-[11px] items-center gap-x-6">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
             >
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-[21.6px]">
           <div className="montserrat font-[600] text-[14px] lg:text-[18px] lg:leading-[26px] md:text-[15px] text-white mb-3">
             Connect us at
           </div>
-          <div className="flex justify-start items-center gap-x-2">
+          <a href="/" className="flex justify-start items-center gap-x-2">
             <img
               src="/HomePage/fb.svg"
               alt="phone"
@@ -176,8 +176,8 @@ const Footer = () => {
             <div className="montserrat font-[500] lg:text-[15px] md:text-[10px] text-[11px] leading-[18px] text-white">
               Facebook
             </div>
-          </div>
-          <div className="flex justify-start items-center gap-x-2">
+          </a>
+          <a href="/" className="flex justify-start items-center gap-x-2">
             <img
               src="/HomePage/ig.svg"
               alt="phone"
@@ -186,7 +186,7 @@ const Footer = () => {
             <div className="montserrat font-[500] lg:text-[15px] md:text-[10px] text-[11px] leading-[18px] text-white">
               Instagram
             </div>
-          </div>
+          </a>
         </div>
         <div className="flex flex-col gap-[24px]">
           <div className="montserrat font-[600] lg:text-[18px] text-[14px] md:text-[15px] lg:leading-[26px] text-white mb-3">
