@@ -3,10 +3,10 @@ import React from 'react';
 const BlogCard = () => {
   
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden cursor-pointer px-4 lg:mb-7 md:mb-0 mb-0">
+    <div className="max-w-sm rounded-lg overflow-hidden cursor-pointer lg:px-0 lg:mb-7 md:mb-0 mb-0">
             <div className=''>
 
-      <img className="w-[236px] md:w-[218px] lg:w-[322px]  h-[144px] md:h-[153px] lg:h-[226px] rounded-[21px] object-cover" src="/HomePage/paneer.jpeg" alt="Burger" />
+      <img className="w-[236px] md:w-[218px] lg:w-[369px]  h-[144px] md:h-[153px] lg:h-[278px] rounded-[21px] object-cover" src="/HomePage/paneer.jpeg" alt="Burger" />
             </div>
       <div className="pt-4">
         <h2 className="text-[12px] leading-[14px] md:text-[20px] md:leading-[24px] lg:text-[20px] lg:leading-[24px] font-[600] text-[#1C6360] montserrat"><p >TITLE HAI</p> </h2>

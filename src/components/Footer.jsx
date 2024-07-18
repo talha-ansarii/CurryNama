@@ -171,7 +171,7 @@ const Footer = () => {
             <img
               src="/HomePage/fb.svg"
               alt="phone"
-              className="lg:w-[21px] lg:h-[21px] md:w-[21px] md:h-[21px] w-[16px] h-[16px]"
+              className="lg:w-[21px] lg:h-[21px] w-[16px] h-[16px] md:w-[13px] md:h-[13px]"
             />
             <div className="montserrat font-[500] lg:text-[15px] md:text-[10px] text-[11px] leading-[18px] text-white">
               Facebook
