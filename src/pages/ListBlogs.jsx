@@ -105,7 +105,7 @@ const ListBlogs = () => {
               }}
               key={blog.id}
             >
-              <BlogCard blog={blog} />
+              <BlogCard />
             </div>
           ))}
         </div>

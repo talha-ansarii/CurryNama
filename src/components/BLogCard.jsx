@@ -3,7 +3,7 @@ import React from 'react';
 const BlogCard = () => {
   
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden cursor-pointer px-4 ">
+    <div className="max-w-sm rounded-lg overflow-hidden cursor-pointer px-4 lg:mb-7 md:mb-0 mb-0">
             <div className=''>
 
       <img className="w-[236px] md:w-[218px] lg:w-[322px]  h-[144px] md:h-[153px] lg:h-[226px] rounded-[21px] object-cover" src="/HomePage/paneer.jpeg" alt="Burger" />
