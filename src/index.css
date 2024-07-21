@@ -98,6 +98,54 @@
 
 
 }
+
+/* General styling for WordPress content */
+.wordpress-content {
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+
+.wordpress-content p {
+  margin-bottom: 1.5em;
+  font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 16.94px;
+}
+
+.wordpress-content h1, .wordpress-content h2, .wordpress-content h3, .wordpress-content h4, .wordpress-content h5, .wordpress-content h6 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.wordpress-content ul, .wordpress-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.wordpress-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wordpress-content blockquote {
+  margin: 1.5em 0;
+  padding: 1em;
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+}
+
+.wordpress-content pre {
+  background: #f4f4f4;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.wordpress-content code {
+  background: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

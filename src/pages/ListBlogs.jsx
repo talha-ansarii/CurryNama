@@ -6,27 +6,25 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Pagination } from "@/components/ui/pagination";
 import PaginationButton from "@/components/PaginationButton";
-
 const ListBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
+  const [latestBlogImgSrc , setLatestBlogImgSrc] = useState(null)
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          `https://backend.sevenburgers.workers.dev/api/v1/blog/bulk?page=${currentPage}&pageSize=9`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
+          `http://localhost/wordpress/wp-json/wp/v2/posts?_fields=id,slug,title,content,date,excerpt`,
+        
         );
-        setBlogs(response.data.blogs);
-        setTotalPages(response.data.totalPages);
+
+        console.log(response.data)
+        await setBlogs(response.data);
+        // console.log(blogs)
+        
       } catch (error) {
         console.error("Error fetching blogs:", error);
       }
@@ -34,22 +32,41 @@ const ListBlogs = () => {
     fetchBlogs();
   }, [currentPage]);
 
+  console.log(blogs)
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
   function getLatestBlog(blogs) {
     const blogsCopy = [...blogs];
-    blogsCopy.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    blogsCopy.sort((a, b) => new Date(b.date) - new Date(a.date));
+    // console.log(blogsCopy[0])
     return blogsCopy[0];
   }
 
   const latestBlog = getLatestBlog(blogs);
   // console.log(latestBlog)
-  const date = new Date(latestBlog?.createdAt);
-
+  const date = new Date(latestBlog?.date);
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = date.toLocaleDateString("en-US", options);
+//   console.log(latestBlog)
+// console.log(formattedDate)
+  
+
+console.log(latestBlog?.content.rendered)
+
+const extractFirstImageSrc = (htmlContent) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlContent, 'text/html');
+  const img = doc.querySelector('img');
+  return img ? img.src : null;
+};
+useEffect(() => {
+  const src = extractFirstImageSrc(latestBlog?.content.rendered);
+setLatestBlogImgSrc(src);
+},[latestBlog])
+
+
 
   return (
     <div>
@@ -59,18 +76,20 @@ const ListBlogs = () => {
          
           <div className="flex lg:flex-row lg:justify-center lg:items-center  md:flex-row flex-col mt-[50px]">
           <img
-              src={latestBlog?.images[0]}
+              src={latestBlogImgSrc}
               className="block md:hidden lg:hidden z-10 w-[326px] h-[172px] md:w-[371px] md:h-[365px] lg:w-[500px] lg:h-[471px] object-cover rounded-t-[20px] md:rounded-r-[20px] lg:rounded-r-[20px]"
             />
             <div className="flex flex-col justify-start md:gap-10 lg:gap-10 gap-2 pt-10 md:w-[50%] items-start bg-[#1C6360] pl-4 pb-4 lg:pl-[30px] md:pl-[30px] md:ml-[0px] lg:ml-[0px] z-0 w-[326px] h-[128px] p-2 lg:w-[50%] lg:h-[522px] md:h-[365px] blog-shadow lg:rounded-l-[20px] rounded-b-[20px] md:rounded-l-[20px] lg:rounded-br-[0px] md:rounded-br-[0px] mt-[-20px] md:mt-[0px] lg:mt-[0px]">
               <div className="text-[20px] pt-[0px] md:leading-[29px] lg:leading-[50px] md:pt-0 lg:pt-0 md:text-[24px] lg:text-[40px] text-[white] montserrat font-[600]">
                 <div
-                  dangerouslySetInnerHTML={{ __html: latestBlog?.title }}
+                  dangerouslySetInnerHTML={{ __html: latestBlog?.title.rendered }}
                 ></div>
               </div>
               <div className="flex flex-col gap-4 montserrat font-[500] md:text-[14px] md:leading-[17.5px] lg:text-[16px] lg:leading-[19.5px] text-white">
               <div className="hidden md:block lg:block">
-              title title lorem ipsum lirem title title lorem ipsum lirem title title lorem ipsum lirem title title lorem ipsum lirem 
+              <div dangerouslySetInnerHTML={{
+                __html: latestBlog?.excerpt.rendered
+              }} ></div> 
 
               </div>
               <div className="flex justify-start items-center gap-2">
@@ -88,7 +107,7 @@ const ListBlogs = () => {
               </div>
             </div>
             <img
-              src={latestBlog?.images[0]}
+              src={latestBlogImgSrc}
               className="hidden md:block lg:block z-10 w-[326px] h-[172px] md:w-[50%] md:h-[365px] lg:w-[50%] lg:h-[522px] object-cover rounded-r-[20px] md:rounded-r-[20px] lg:rounded-r-[20px]"
             />
           </div>
@@ -108,15 +127,15 @@ const ListBlogs = () => {
             >
             {
               index%3 === 0 || index === 0 ? <div className="flex w-full justify-start">
-                <BlogCard />
+                <BlogCard blog={blog} />
               </div>
               :
               index%3 === 1 ? <div className="flex w-full justify-center">
-                <BlogCard />
+                <BlogCard blog={blog} />
               </div>
               :
               <div className="flex w-full justify-end">
-                <BlogCard />
+                <BlogCard blog={blog} />
                 </div>
                
             }
