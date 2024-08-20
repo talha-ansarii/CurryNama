@@ -71,28 +71,27 @@ const ContactUs = () => {
                 <div className="teko pt-10 text-[28px] font-[600] leading-[42px] text-white">
                 Get In Touch
                 </div>
-                <div className="montserrat text-[18px] font-[400] leading-[27px] text-[#C9C9C9]">
-                  Say something to start a live chat!
-                </div>
+               
               </div>
               <div className="flex flex-col gap-12 text-white">
                 <div className="flex flex-col md:flex-row lg:flex-row gap-2 justify-start items-center">
                   <FaPhoneVolume className="w-[17px] h-[17px]" />
                   <div className="inter font-[400] text-[15px] leading-[18px]">
-                    +1012 3456 789
+                  +91 96259 29191
+
                   </div>
                 </div>
                 <div className="flex gap-2 flex-col md:flex-row lg:flex-row justify-start items-center">
                   <FaEnvelope className="w-[17px] h-[17px]" />
                   <a className="inter font-[400] text-[15px] leading-[18px]">
-                    demo@gmail.com
+                  Mgr@sevenseaskitchens.com
+
                   </a>
                 </div>
                 <div className="flex gap-2 flex-col md:flex-row lg:flex-row justify-normal items-center">
                   <FaLocationDot className="w-[17px] h-[17px]" />
                   <div className="inter font-[400] text-[15px] leading-[18px]">
-                    132 Dartmouth Street Boston, Massachusetts 02156 United
-                    States
+                  12, M2K Rd, Mangalam Place, Rohini, New Delhi, Delhi, 110085
                   </div>
                 </div>
               </div>

@@ -8,82 +8,112 @@ const Faq = () => {
     {
       question: "What is Currynama?",
       answer:
-        "Currynama is a fictional restaurant that serves delicious Indian cuisine, including a variety of curries, biryanis, and tandoori dishes.",
-      open: true,
-    },
-    {
-      question: "How can I place an order with Currynama?",
-      answer:
-        "You can place an order with Currynama through our website or mobile app. Simply select your items, add them to your cart, and proceed to checkout.",
+        "Currynama is a premium cloud kitchen offering a wide range of authentic North Indian dishes, including delicious non-vegetarian options, available for delivery across Delhi NCR.",
       open: false,
     },
     {
-      question: "What areas do you deliver to?",
+      question: "What areas do you serve?",
       answer:
-        "We deliver to select areas within the city. You can check if we deliver to your location by entering your address during the ordering process.",
+        "Currynama serves various locations across Delhi NCR. Please check our website or delivery app to see if we deliver to your area.",
+      open: false,
+    },
+    {
+      question: "How can I place an order?",
+      answer:
+        "You can order through our website or popular food delivery platforms like Zomato and Swiggy.",
       open: false,
     },
     {
       question: "What are your operating hours?",
-      answer:
-        "Our operating hours are from 11:00 AM to 10:00 PM, Monday to Sunday. Please note that delivery times may vary based on your location.",
+      answer: "We operate from 11:00 AM to 11:00 PM, seven days a week.",
       open: false,
     },
     {
-      question: "How do you ensure the freshness of your food during delivery?",
+      question: "What type of cuisine do you offer?",
       answer:
-        "We use insulated packaging and temperature-controlled bags to maintain the freshness and quality of your food during delivery.",
+        "Currynama specializes in premium North Indian cuisine, featuring a variety of vegetarian and non-vegetarian dishes.",
       open: false,
     },
     {
-      question: "How can I contact customer service?",
+      question: "Do you use organic ingredients?",
       answer:
-        "You can contact our customer service team through the contact form on our website, via email at",
+        "We prioritize high-quality ingredients and use organic products according to the dish to ensure the best taste and nutrition.",
+      open: false,
+    },
+    {
+      question: "How long does delivery take?",
+      answer:
+        "Delivery times vary depending on your location and order size, but we aim to deliver within 45-60 minutes.",
+      open: false,
+    },
+    {
+      question: "Is there a minimum order amount?",
+      answer:
+        "Yes, the minimum order amount varies by location. Please check the details during the checkout process.",
+      open: false,
+    },
+    {
+      question: "Do you offer contactless delivery?",
+      answer:
+        "Yes, we offer contactless delivery for your safety and convenience. You can select this option during checkout.",
+      open: false,
+    },
+    {
+      question: "Can I schedule an order for a later time?",
+      answer:
+        "Yes, you can schedule your order in advance through our website or app.",
       open: false,
     },
     {
       question: "What payment methods do you accept?",
       answer:
-        "We accept all major credit cards, debit cards, and popular digital payment methods like PayPal and Apple Pay.",
+        "We accept various payment methods including credit/debit cards, UPI, and net banking.",
       open: false,
     },
     {
-      question: "Do you have any promotions or discounts?",
+      question: "Do you offer any discounts or promotions?",
       answer:
-        "We offer regular promotions and discounts on select menu items. Check our website or social media pages for the latest deals.",
+        "Yes, we regularly offer discounts and promotions. Please check our website or subscribe to our newsletter for the latest offers.",
       open: false,
     },
     {
-      question: "How do you ensure the freshness of your food during delivery?",
+      question: "How do we ensure food safety and hygiene?",
       answer:
-        "Our packaging is designed to maintain the temperature and freshness of your food, ensuring it arrives hot and delicious.",
+        "We follow strict hygiene protocols and quality control measures to ensure that our food is prepared and delivered safely.",
       open: false,
     },
     {
-      question: "What is your return or refund policy?",
+      question: "How do you handle food allergies and special dietary requirements?",
       answer:
-        "If you are not satisfied with your order, please contact our customer service within 24 hours for assistance with refunds or replacements.",
+        "Please inform us of any allergies or dietary requirements when placing your order, and we will do our best to accommodate your needs.",
       open: false,
     },
     {
-      question: "Do you offer catering services?",
+      question: "Can I customise my order?",
       answer:
-        "Yes, we provide catering services for events and parties. Contact us for more information and customized menu options.",
+        "Yes, you can customise your order to suit your preferences. Please use the customisation options available on our website or app.",
       open: false,
     },
     {
-      question: "How can I contact customer service?",
+      question: "What should I do if there is an issue with my order?",
       answer:
-        "You can reach our customer service through the contact form on our website, via email at support@sevenburgers.com, or by calling our hotline at (123) 456-7890.",
+        "If there is an issue with your order, please contact our customer support team immediately, and we will resolve it as quickly as possible.",
       open: false,
     },
     {
-      question: "Do you have any promotions or discounts?",
+      question: "How can I provide feedback about my experience?",
       answer:
-        "We regularly offer promotions and discounts. Check our website or subscribe to our newsletter for the latest deals.",
+        "We value your feedback. You can provide feedback through our website, app, or by contacting our customer support team directly.",
       open: false,
-    }
+    },
+    {
+      question: "Do you cater for events or large orders?",
+      answer:
+        "Yes, we offer catering services for events and large orders. Please contact us for more details and to make arrangements.",
+      open: false,
+    },
   ]);
+  
 
   const faqsRef = useRef(null);
 

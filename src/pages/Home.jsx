@@ -60,15 +60,32 @@ const Home = () => {
         </div>
       </div>
       <div className="w-[87%] md:hidden mb-[40px] lg:hidden mx-auto grid grid-cols-3 gap-4">
-        <Card />
-        <Card />
-        <Card />
+        <Card img={"/HomePage/butterChicken.jpeg"}
+        name={"Butter Chicken"}
+         />
+        <Card img={"/HomePage/dal.jpg"} 
+        name={"Dal Makhani"}
+        />
+        <Card img={"/HomePage/paneer.jpg"}
+        name={"Paneer Tikka"}
+         />
+        <Card img={"/HomePage/pav.jpg"}
+        name={"Pav Bhaji"}
+         />
       </div>
       <div className="md:w-[87%]  hidden md:grid mb-[40px] mx-auto lg:grid grid-cols-4 gap-4">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <Card img={"/HomePage/butterChicken.jpeg"}
+        name={"Butter Chicken"}
+         />
+        <Card img={"/HomePage/dal.jpg"} 
+        name={"Dal Makhani"}
+        />
+        <Card img={"/HomePage/paneer.jpg"}
+        name={"Paneer Tikka"}
+         />
+        <Card img={"/HomePage/pav.jpg"}
+        name={"Pav Bhaji"}
+         />
       </div>
       <div className="w-full flex">
         <div className="w-[47%] relative md:h-[362px] lg:h-[632px]  h-[265px]  bg-[#1C6360]  ">

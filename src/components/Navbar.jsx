@@ -69,7 +69,7 @@ const imgVariants = {
             <img src='/logo.png' alt='logo' className='w-[88px] h-[83px]' />
           </div>
           <div>
-          <div >
+          <d  iv >
 
           {!isOpen ? (
             <button
@@ -99,7 +99,7 @@ const imgVariants = {
 
                 </button>
                 )}
-          </div>
+          </d>
           <div >
 
           <AnimatePresence>

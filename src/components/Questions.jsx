@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import HomePageFAQ from "./HomePageFAQ";
+import { Link } from "react-router-dom";
 
 const Questions = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "What areas do you deliver to?",
+      question: " What is Currynama?",
       answer:
-        "We deliver to various neighborhoods within the city. Please check our delivery area on our website or app for specific details.",
+        " Currynama is a premium cloud kitchen offering a wide range of authentic North Indian dishes, including delicious non-vegetarian options, available for delivery across Delhi NCR.",
       open: false,
     },
     {
-      question: "How can I contact customer service?",
+      question: "What areas do you serve?",
       answer:
-        "You can contact our customer service team by calling us at +91 1234567890 or by emailing us at",
+        "Currynama serves various locations across Delhi NCR. Please check our website or delivery app to see if we deliver to your area.",
       open: false,
     },
     {
-      question: "What payment methods do you accept?",
+      question: "How can I place an order?",
       answer:
-        "We accept all major credit and debit cards, as well as digital wallets like Paytm, Google Pay, and PhonePe.",
+        "You can order through our website or popular food delivery platforms like Zomato and Swiggy.",
       open: false,
     },
   ]);
@@ -48,9 +49,13 @@ const Questions = () => {
             ))}
           </div>
           <div className="w-full flex justify-end">
-            <button className="montserrat text-[7px] md:text-[10px] lg:text-[12px] mr-1 md:mr-12 mt-[-10px] md:mt-[-5px] lg:mr-[0px] font-[500] w-[50px] h-[14px] md:w-[79px] md:h-[19px] lg:w-[91px] lg:h-[25px]   anyMoreShadow">
+          <Link to={"/faq"}>
+            <button
+             className="montserrat text-[7px] md:text-[10px] lg:text-[12px] mr-1 md:mr-12 mt-[-10px] md:mt-[-5px] lg:mr-[0px] font-[500] w-[50px] h-[14px] md:w-[79px] md:h-[19px] lg:w-[91px] lg:h-[25px]   anyMoreShadow">
             Any more..?
             </button>
+
+          </Link>
           </div>
     </div>
   );

@@ -17,8 +17,7 @@ const ListBlogs = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          `http://localhost/wordpress/wp-json/wp/v2/posts?_fields=id,slug,title,content,date,excerpt`,
-        
+          `http://localhost/wordpress/wp-json/wp/v2/posts?_fields=id,slug,title,content,date,excerpt`,        
         );
 
         console.log(response.data)
