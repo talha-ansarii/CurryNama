@@ -1,9 +1,9 @@
 import React from "react";
 
 function Card({img,name}) {
-  console.log(img)
+  // console.log(img)
   return (
-    <div className="relative w-[90px] md:w-[146px] lg:w-[242px] lg:h-[333px] md:h-[213px] h-[124px] flex items-end md:pb-4 pb-2 justify-center lg:p-6  rounded-[10px] lg:rounded-[20px] card-shadow">
+    <div className="relative  hover:scale-105 transition-all duration-300  w-[90px] md:w-[146px] lg:w-[242px] lg:h-[333px] md:h-[213px] h-[124px] flex items-end md:pb-4 pb-2 justify-center lg:p-6  rounded-[10px] lg:rounded-[20px] card-shadow">
       <div>
         <img
           src={img}
@@ -16,11 +16,10 @@ function Card({img,name}) {
           {name}
         </div>
         <div className="montserrat font-[400] lg:text-[10px] lg:leading-[12.19px] text-[4px] md:text-[8px] md:leading-[9.75px]  text-center ">
-          Traditional Punjabi recipe, tender Chicken cooked in rich tomato gravy
-          topped with butter.
+        Seven Seas signature, dal is slow cooked for 48 hours enriched with home churned butter
         </div>
         <div className="montserrat md:text-[14px] lg:text-[22px] lg:leading-[26px] font-[600] text-[11px] leading-[13.41px] text-center">
-          Rs 565.00
+          Rs 495.00
         </div>
         <button className="montserrat w-[50px] lg:w-[108px] md:w-[100px] font-[600] md:text-[14px] btn-shadow text-[6px] text-white bg-[#DA3D12] px-[6px] py-[4px] rounded-[11px] text-center">
           Order Now

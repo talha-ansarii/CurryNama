@@ -54,9 +54,9 @@ const RotatingImages = () => {
       <div className=' '>
 
         <div className=' w-full h-[100%] '>
-        <div className='absolute md:top-[100px] top-[30px] left-[30px] md:left-[0px] lg:top-10 lg:left-0 border-[3px] opacity-[10%] border-white rounded-full md:w-[300px] w-[200px] h-[200px] md:h-[300px] lg:w-[400px] lg:h-[400px]'></div>
-        <div className='absolute md:top-[90px] top-[20px] left-[20px] md:left-[-10px] lg:top-[30px] lg:left-[-10px] img-border rounded-full md:w-[320px] w-[220px] h-[220px] md:h-[320px] lg:w-[420px] lg:h-[420px]'></div>
-        <img src={images[index]} alt='Rotating Image' className='absolute md:top-[100px] top-[30px] left-[30px] md:left-[0px] lg:top-10 lg:left-0 object-contain w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] ' />
+        <div className='absolute md:top-[100px] top-[30px] left-[50%] translate-x-[-65%] md:left-[0px] lg:top-10 lg:left-0 border-[3px] opacity-[10%] border-white rounded-full lg:translate-x-0 md:translate-x-0 md:w-[300px] w-[200px] h-[200px] md:h-[300px] lg:w-[400px] lg:h-[400px]'></div>
+    
+        <img src={images[index]} alt='Rotating Image' className='absolute md:top-[100px] top-[30px] left-[50%] translate-x-[-65%] md:left-[0px] lg:top-10 lg:left-0 md:translate-x-0 lg:translate-x-0 object-contain w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] ' />
         </div>
 
         

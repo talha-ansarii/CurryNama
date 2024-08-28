@@ -36,6 +36,11 @@ const ListBlogs = () => {
     setCurrentPage(page);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   function getLatestBlog(blogs) {
     const blogsCopy = [...blogs];
     blogsCopy.sort((a, b) => new Date(b.date) - new Date(a.date));

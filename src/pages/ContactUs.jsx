@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import Navbar from "../components/Navbar";
 import { FaInstagram, FaFacebookF, FaYoutube, FaEnvelope } from "react-icons/fa";
@@ -21,6 +21,10 @@ const ContactUs = () => {
     "Contact Inquiry",
     "Additional Request",
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

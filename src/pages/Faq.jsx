@@ -113,9 +113,14 @@ const Faq = () => {
       open: false,
     },
   ]);
-  
 
+  const [showLoadMore, setShowLoadMore] = useState(true);
   const faqsRef = useRef(null);
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const toggleFAQ = (index) => {
     setFaqs(
@@ -132,15 +137,41 @@ const Faq = () => {
 
   const scrollToBottom = () => {
     if (faqsRef.current) {
-      // console.log(faqsRef.current.scrollHeight)
-      faqsRef.current.scrollTo({ top: faqsRef.current.scrollHeight, behavior: "smooth" });
+      faqsRef.current.scrollTo({
+        top: faqsRef.current.scrollHeight,
+        behavior: "smooth",
+      });
     }
   };
+
+  const handleScroll = () => {
+    if (faqsRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = faqsRef.current;
+      if (scrollTop + clientHeight >= scrollHeight) {
+        setShowLoadMore(false);
+      } else {
+        setShowLoadMore(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const faqsContainer = faqsRef.current;
+    if (faqsContainer) {
+      faqsContainer.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (faqsContainer) {
+        faqsContainer.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-[white]">
       <Navbar />
-      <div className="pt-[100px]  text-[24px] md:text-[40px] lg:text-[85px] bg-[white] absolute w-full z-20 teko font-[700] text-center text-[#DA3D12]"> 
+      <div className="pt-[100px] text-[24px] md:text-[40px] lg:text-[85px] bg-[white] absolute w-full z-20 teko font-[700] text-center text-[#DA3D12]">
         Frequently Asked Questions
       </div>
       <div className="w-[90%] h-[900px] lg:h-[1000px] mx-auto relative flex lg:flex-row flex-col lg:pt-[220px]">
@@ -148,27 +179,33 @@ const Faq = () => {
           <img
             src="/Faq/1.png"
             alt="faq"
-            className="z-[0] md:mt-20 w-[253px] md:w-[375px] md:h-[387px] h-[261px]  transition-all ease-linear duration-400 lg:w-[30%] lg:absolute lg:translate-y-[-50%] top-[50%] object-contain"
+            className="z-[0] md:mt-20 w-[253px] md:w-[375px] md:h-[387px] h-[261px] transition-all ease-linear duration-400 lg:w-[30%] lg:absolute lg:translate-y-[-50%] top-[50%] object-contain"
           />
         </div>
         <div className="lg:w-[55%]">
           <div
             ref={faqsRef}
-            className="faqs w-full h-[300px] md:h-[250px] mt-[-100px] lg:h-[85%] md:mt-[30px] lg:mt-[30px]  overflow-y-scroll mx-auto cursor-pointer p-1"
+            className="faqs w-full h-[300px] md:h-[250px] mt-[-100px] lg:h-[85%] md:mt-[30px] lg:mt-[30px] overflow-y-scroll mx-auto cursor-pointer p-1"
           >
             {faqs.map((faq, index) => (
               <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
             ))}
           </div>
-          <div
-            className="flex gap-2 lg:mb-0 mb-10 ml-2 lg:ml-5 w-full items-center hover:underline cursor-pointer mt-2"
-            onClick={scrollToBottom}
-          >
-            <div className="montserrat font-[500] text-[10px] md:text-[14px] lg:text-[14px] text-[#1C6360]">
-              Load more questions
+          {showLoadMore && (
+            <div
+              className="flex gap-2 lg:mb-0 mb-10 ml-2 lg:ml-5 w-full items-center hover:underline cursor-pointer mt-2"
+              onClick={scrollToBottom}
+            >
+              <div className="montserrat font-[500] text-[10px] md:text-[14px] lg:text-[14px] text-[#1C6360]">
+                Load more questions
+              </div>
+              <img
+                src="/Faq/arrow.svg"
+                alt="faq"
+                className="lg:w-[16px] md:w-[16px] w-[14px]"
+              />
             </div>
-            <img src="/Faq/arrow.svg" alt="faq" className="lg:w-[16px] md:w-[16px] w-[14px]" />
-          </div>
+          )}
         </div>
       </div>
       <Footer />
@@ -177,3 +214,4 @@ const Faq = () => {
 };
 
 export default Faq;
+

@@ -126,7 +126,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-start items-center text-[11px] gap-x-6">
               <Link
-                to="/outstory"
+                to="/ourstory"
                 className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
               >
                 Our Story
@@ -154,14 +154,7 @@ const Footer = () => {
               Terms & Services
             </Link>
           </div>
-          <div className="flex justify-start text-[11px] items-center gap-x-6">
-            <Link
-              to="/"
-              className="montserrat font-[500] lg:text-[15px] md:text-[10px] leading-[18px] text-white"
-            >
-              Terms of Use
-            </Link>
-          </div>
+         
         </div>
         <div className="flex flex-col gap-[21.6px]">
           <div className="montserrat font-[600] text-[14px] lg:text-[18px] lg:leading-[26px] md:text-[15px] text-white mb-3">

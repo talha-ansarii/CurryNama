@@ -7,6 +7,10 @@ import Footer from "../components/Footer";
 
 const Blog = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [scrollY, setScrollY] = useState(0);
   const [blogs, setBlogs] = useState([]);
 

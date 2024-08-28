@@ -2,6 +2,9 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import RotatingImages from "../components/RotatingImages";
 import Card from "../components/Card";
+import Card1 from "../components/Card1";
+import Card2 from "../components/Card2";
+import Card3 from "../components/Card3";
 import PiledCards from "../components/PiledCards";
 import Banner from "../components/Banner";
 import Rating from "../components/Rating";
@@ -59,17 +62,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-[87%] md:hidden mb-[40px] lg:hidden mx-auto grid grid-cols-3 gap-4">
+      <div className="w-[87%] md:hidden mb-[40px] lg:hidden mx-auto grid grid-cols-3 gap-x-4 gap-y-[50px]">
         <Card img={"/HomePage/butterChicken.jpeg"}
         name={"Butter Chicken"}
          />
-        <Card img={"/HomePage/dal.jpg"} 
+        <Card1 img={"/HomePage/dal.jpg"} 
         name={"Dal Makhani"}
         />
-        <Card img={"/HomePage/paneer.jpg"}
+        <Card2 img={"/HomePage/paneer.jpg"}
         name={"Paneer Tikka"}
          />
-        <Card img={"/HomePage/pav.jpg"}
+        <Card3 img={"/HomePage/pav.jpg"}
         name={"Pav Bhaji"}
          />
       </div>
@@ -77,13 +80,13 @@ const Home = () => {
       <Card img={"/HomePage/butterChicken.jpeg"}
         name={"Butter Chicken"}
          />
-        <Card img={"/HomePage/dal.jpg"} 
+        <Card1 img={"/HomePage/dal.jpg"} 
         name={"Dal Makhani"}
         />
-        <Card img={"/HomePage/paneer.jpg"}
+        <Card2 img={"/HomePage/paneer.jpg"}
         name={"Paneer Tikka"}
          />
-        <Card img={"/HomePage/pav.jpg"}
+        <Card3 img={"/HomePage/pav.jpg"}
         name={"Pav Bhaji"}
          />
       </div>
@@ -131,22 +134,19 @@ const Home = () => {
             have experienced the magic of Currynama's offerings.
           </div>
           <Rating />
-          <div className="grid grid-cols-2 gap-x-7 gap-y-10">
-            <Ratingcard />
-            <Ratingcard />
-            <Ratingcard />
+          <div className="">
             <Ratingcard />
           </div>
         </div>
       </div>
 
-      <div className="w-full bg-[#FFFBF2] pt-10  pb-10 hidden md:block lg:block">
+      <div className="w-full bg-[#FFFBF2] pt-10 pb-10 hidden md:block lg:block">
         <div className="w-[87%]  m-auto pt-4 flex ">
         <div className="w-[50%]">
-          <div className="text-[#DA3D12] teko font-[500] text-[24px] leading-[34.39px] md:text-[40px] md:leading-[57.39px]  ">
+          <div className="text-[#DA3D12] teko font-[500] text-[33px] leading-[34.39px] md:text-[40px] md:leading-[57.39px]  ">
             What Our Customers Says
           </div>
-          <div className=" md:hidden lg:block hidden font-[500] mb-4 text-[#1C6360]/[60%] montserrat text-[8px] leading-[9.75px] md:text-[14px] md:leading-[17.07px]">
+          <div className=" md:hidden lg:block hidden font-[500] mb-4 text-[#1C6360]/[60%] montserrat text-[12px] leading-[9.75px] md:text-[14px] md:leading-[17.07px]">
             We've gathered a collection of reviews from delighted <br/> customers who
             have experienced the magic of <br/> Currynama's offerings.
           </div>
@@ -157,16 +157,11 @@ const Home = () => {
 
         </div>
         <div className="w-[50%]">
-
           <Rating />
         </div>
-          
         </div>
         <div>
-          <div className="lg:w-[90%] md:w-[87%] pb-20 m-auto md:pt-8 lg:pt-20 grid grid-cols-4 justify-items-center gap-x-10 gap-y-10">
-            <Ratingcard />
-            <Ratingcard />
-            <Ratingcard />
+          <div className="lg:w-[87%] md:w-[87%] pb-20 m-auto md:pt-8 lg:pt-20 flex justify-between  ">
             <Ratingcard />
           </div>
         </div>
@@ -185,8 +180,13 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img src="/HomePage/premium.jpeg" alt="group" className=" absolute top-[-5px] md:top-[-13px] lg:top-[-20px] right-0 w-[124px] h-[177px] rounded-[10px] md:w-[199px] md:h-[271px] md:rounded-[25px] lg:w-[343px] lg:h-[464px] lg:rounded-[25px] object-cover" />
-        </div>
+  <img  
+    src="/HomePage/premium.jpg" 
+    alt="group" 
+    className="absolute top-[-5px] md:top-[-13px] lg:top-[-20px] right-0 w-[124px] h-[200px] md:w-[199px] md:h-[290px] md:rounded-[25px] lg:w-[343px] lg:h-[475px] lg:rounded-[25px] object-cover" 
+  />
+</div>
+
       </div>
 
 

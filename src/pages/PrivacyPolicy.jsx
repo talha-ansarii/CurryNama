@@ -1,9 +1,13 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const PrivacyPolicy = () => {
   const  [privacy, setPrivacy] = useState(true)
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
     <Navbar/>
