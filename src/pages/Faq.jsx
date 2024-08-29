@@ -174,18 +174,18 @@ const Faq = () => {
       <div className="pt-[100px] text-[24px] md:text-[40px] lg:text-[85px] bg-[white] absolute w-full z-20 teko font-[700] text-center text-[#DA3D12]">
         Frequently Asked Questions
       </div>
-      <div className="w-[90%] h-[900px] lg:h-[1000px] mx-auto relative flex lg:flex-row flex-col lg:pt-[220px]">
-        <div className="lg:w-[40%] pt-[0px] md:pt-[100px] lg:pt-20 flex justify-center items-center m-auto">
+      <div className="w-[90%] lg:h-[1000px] mx-auto relative flex lg:flex-row flex-col lg:pt-[220px]">
+        <div className="lg:w-[40%] pt-[0px] mt-[150px] md:mt-0 lg:mt-0 md:pt-[100px] lg:pt-20 flex justify-center items-center m-auto">
           <img
             src="/Faq/1.png"
             alt="faq"
             className="z-[0] md:mt-20 w-[253px] md:w-[375px] md:h-[387px] h-[261px] transition-all ease-linear duration-400 lg:w-[30%] lg:absolute lg:translate-y-[-50%] top-[50%] object-contain"
           />
         </div>
-        <div className="lg:w-[55%]">
+        <div className="lg:w-[55%] mb-10 md:mb-0 lg:mb-0">
           <div
             ref={faqsRef}
-            className="faqs w-full h-[300px] md:h-[250px] mt-[-100px] lg:h-[85%] md:mt-[30px] lg:mt-[30px] overflow-y-scroll mx-auto cursor-pointer p-1"
+            className="faqs w-full  md:h-[250px]  lg:h-[85%] md:mt-[30px] lg:mt-[30px] overflow-y-scroll  mx-auto cursor-pointer p-1"
           >
             {faqs.map((faq, index) => (
               <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
@@ -193,7 +193,7 @@ const Faq = () => {
           </div>
           {showLoadMore && (
             <div
-              className="flex gap-2 lg:mb-0 mb-10 ml-2 lg:ml-5 w-full items-center hover:underline cursor-pointer mt-2"
+              className=" hidden md:flex lg:flex  gap-2 lg:mb-0 mb-10 ml-2 lg:ml-5 w-full items-center hover:underline cursor-pointer mt-2"
               onClick={scrollToBottom}
             >
               <div className="montserrat font-[500] text-[10px] md:text-[14px] lg:text-[14px] text-[#1C6360]">

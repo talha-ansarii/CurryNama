@@ -29,7 +29,10 @@ const Banner = () => {
   return (
     <div className='relative  w-full h-[155px] md:h-[361px] lg:h-[548px] '>
         <div  className='absolute flex left-[50%] translate-x-[-50%] top-0 w-[310px] h-[155px] md:h-[361px] md:w-[740px] lg:h-[548px] lg:w-[100%] border border-gray-500 bg-[#1c6360] text-white rounded-tr-[30px] rounded-bl-[30px] md:rounded-tr-[75px] md:rounded-bl-[75px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] object-cover'>
-        <img src={images[index]} alt='banner' className='w-[30%] object-cover rounded-bl-[30px] md:rounded-bl-[75px] lg:rounded-bl-[100px] m-4 '/>
+        <div className='w-[30%] flex justify-center items-center'>
+        <img src={images[index]} alt='banner' className=' object-cover p-4  md:p-10 lg:p-14 '/>
+
+        </div>
         <div className='w-[70%] text-[6px] lg:text-[20px] md:text-[15px] text-center flex justify-center items-center px-[50px]  montserrat font-[700] '>
         {
             index === 0 ?  <div >

@@ -51,7 +51,7 @@ const Questions = () => {
           <div className="w-full flex justify-end">
           <Link to={"/faq"}>
             <button
-             className="montserrat text-[7px] md:text-[10px] lg:text-[12px] mr-1 md:mr-12 mt-[-10px] md:mt-[-5px] lg:mr-[0px] font-[500] w-[50px] h-[14px] md:w-[79px] md:h-[19px] lg:w-[91px] lg:h-[25px]   anyMoreShadow">
+             className="montserrat text-[10px] md:text-[12px] lg:text-[14px] mr-1 md:mr-12 mt-[-10px] md:mt-[-5px] lg:mr-[0px] font-[500] w-[80px] h-[20px] md:w-[90px] md:h-[25px] lg:w-[100px] lg:h-[30px]   anyMoreShadow">
             Any more..?
             </button>
 

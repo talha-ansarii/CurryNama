@@ -48,9 +48,9 @@ const PiledCards = () => {
 
   return (
     <div className=" relative top-0 left-0 h-full mt-[40px] ">
-      <img src={images[index]} alt='1' className='img1 absolute piledCardsShadow z-[30] top-[40px] lg:top-[100px] left-[50%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px] w-[87px] h-[104px] object-cover' />
-      <img src={images[index1]} alt='1' className='img2 absolute piledCardsShadow z-[20] top-[40px] lg:top-[100px] left-[55%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px]  w-[87px] h-[104px] rotate-[11.21deg] object-cover' />
-      <img src={images[index2]} alt='1' className='img3 absolute piledCardsShadow z-[10] top-[40px] lg:top-[100px] left-[45%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px]  w-[87px] h-[104px]  rotate-[-14.37deg] object-cover' />
+      <img src={images[index]} alt='1' className='img1 absolute piledCardsShadow z-[30] top-[40px] lg:top-[100px] left-[50%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px] w-[110px] h-[130px] object-cover' />
+      <img src={images[index1]} alt='1' className='img2 absolute piledCardsShadow z-[20] top-[40px] lg:top-[100px] left-[55%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px]  w-[110px] h-[130px] rotate-[11.21deg] object-cover' />
+      <img src={images[index2]} alt='1' className='img3 absolute piledCardsShadow z-[10] top-[40px] lg:top-[100px] left-[45%] translate-x-[-50%] rounded-[7px] md:w-[192px] lg:w-[330px] lg:h-[389px] md:h-[223px] md:rounded-[20px]  w-[110px] h-[130px]  rotate-[-14.37deg] object-cover' />
     </div>
 
     

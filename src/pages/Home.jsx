@@ -29,7 +29,7 @@ const Home = () => {
               </p>
             </div>
             <div className="w-full flex md:justify-start lg:justify-start justify-center">
-              <button className="montserrat mt-[30px] btn-shadow font-[600px] text-[18px] w-[150px] h-[50px] px-[8x] py-[3px] lg:text-[26px] lg:w-[200px] lg:h-[55px] lg:px-[13px] lg:py-[7px] md:text-[26px] md:w-[200px] md:h-[55px] md:px-[13px] md:py-[7px] rounded-[11px] bg-[#DA3D12] text-white  ">
+              <button className="montserrat mt-[30px] btn-shadow font-[600px] text-[20px] w-[150px] h-[50px] px-[8x] py-[3px] lg:text-[26px] lg:w-[200px] lg:h-[55px] lg:px-[13px] lg:py-[7px] md:text-[26px] md:w-[200px] md:h-[55px] md:px-[13px] md:py-[7px] rounded-[11px] bg-[#DA3D12] text-white  ">
                 Order Now
               </button>
             </div>
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" w-[87%] flex flex-row justify-between items-baseline mx-auto mb-[50px] md:mb-[90px] mt-[50px] lg:mt-[150px] md:mt-[90px] ">
+      <div className=" w-[87%] flex flex-row justify-between items-center mx-auto mb-[50px] md:mb-[90px] mt-[50px] lg:mt-[150px] md:mt-[90px] ">
         <div className="text-[24px] lg:text-[48px] leading-[34px] md:text-[36px] text-[#DA3D12] teko font-[500]">
           Best dishes for you
         </div>
@@ -62,45 +62,38 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-[87%] md:hidden mb-[40px] lg:hidden mx-auto grid grid-cols-3 gap-x-4 gap-y-[50px]">
-        <Card img={"/HomePage/butterChicken.jpeg"}
-        name={"Butter Chicken"}
-         />
-        <Card1 img={"/HomePage/dal.jpg"} 
-        name={"Dal Makhani"}
-        />
-        <Card2 img={"/HomePage/paneer.jpg"}
-        name={"Paneer Tikka"}
-         />
-        <Card3 img={"/HomePage/pav.jpg"}
-        name={"Pav Bhaji"}
-         />
-      </div>
-      <div className="md:w-[87%]  hidden md:grid mb-[40px] mx-auto lg:grid grid-cols-4 gap-4">
-      <Card img={"/HomePage/butterChicken.jpeg"}
-        name={"Butter Chicken"}
-         />
-        <Card1 img={"/HomePage/dal.jpg"} 
-        name={"Dal Makhani"}
-        />
-        <Card2 img={"/HomePage/paneer.jpg"}
-        name={"Paneer Tikka"}
-         />
-        <Card3 img={"/HomePage/pav.jpg"}
-        name={"Pav Bhaji"}
-         />
-      </div>
+{/* Mobile View: Horizontal Scroll */}
+<div className="w-full p-8 md:hidden mb-[40px] mx-auto overflow-x-auto flex gap-x-4 overflow-visible">
+  <div className="flex-none">
+    <Card img={"/HomePage/butterChicken.jpeg"} name={"Butter Chicken"} />
+  </div>
+  <div className="flex-none">
+    <Card img={"/HomePage/dal.jpg"} name={"Dal Makhani"} />
+  </div>
+  <div className="flex-none">
+    <Card img={"/HomePage/paneer.jpg"} name={"Paneer Tikka"} />
+  </div>
+  <div className="flex-none">
+    <Card img={"/HomePage/pav.jpg"} name={"Pav Bhaji"} />
+  </div>
+</div>
+      <div className="hidden md:grid md:w-[87%] mb-[40px] mx-auto lg:grid grid-cols-4 gap-4 overflow-visible">
+  <Card img={"/HomePage/butterChicken.jpeg"} name={"Butter Chicken"} />
+  <Card img={"/HomePage/dal.jpg"} name={"Dal Makhani"} />
+  <Card img={"/HomePage/paneer.jpg"} name={"Paneer Tikka"} />
+  <Card img={"/HomePage/pav.jpg"} name={"Pav Bhaji"} />
+</div>
       <div className="w-full flex">
         <div className="w-[47%] relative md:h-[362px] lg:h-[632px]  h-[265px]  bg-[#1C6360]  ">
           <div className="w-full absolute h-full  bg-hero-pattern bgTransparent "></div>
           <PiledCards />
         </div>
-        <div className="w-[53%] h-[265px] md:h-[362px]  lg:h-[632px]  bg-[#B41C55] flex flex-col gap-6 pl-4 md:pr-10 pr-6 lg:p r-[100px] lg:pl-[50px] justify-center">
+        <div className="w-[53%] h-[265px] md:h-[362px]  lg:h-[632px]  bg-[#B41C55] flex flex-col gap-4 pl-4 md:pr-10 pr-6 lg:p r-[100px] lg:pl-[50px] justify-center">
           <div className="teko font-[700] text-[15px] leading-[21.5px] md:text-[32px] md:leading-[45.86px] text-white lg:text-[48px] lg:leading-[68.78px] ">
             BHOOK TO THA EK BAHANA,
             <br /> KHANA THA <span className="text-[#FAB700]">CURRYNAMA</span>
           </div>
-          <div className="montserrat flex flex-col gap-4 font-[500] text-[7px] leading-[8.53px] md:text-[12px] md:leading-[14.63px] lg:text-[17px] lg:leading-[24.32px] text-white">
+          <div className="montserrat flex flex-col gap-2 font-[500] text-[7px] leading-[8.53px] md:text-[12px] md:leading-[14.63px] lg:text-[17px] lg:leading-[24.32px] text-white">
             <div>
               Coming from the house of Seven Seas with more than 25 years of
               legacy, Currynama promises to serve nothing but the best Indian
@@ -183,7 +176,7 @@ const Home = () => {
   <img  
     src="/HomePage/premium.jpg" 
     alt="group" 
-    className="absolute top-[-5px] md:top-[-13px] lg:top-[-20px] right-0 w-[124px] h-[200px] md:w-[199px] md:h-[290px] md:rounded-[25px] lg:w-[343px] lg:h-[475px] lg:rounded-[25px] object-cover" 
+    className="absolute top-[-18px] md:top-[-13px] lg:top-[-20px] right-0 w-[124px] h-[200px] md:w-[199px] md:h-[290px] md:rounded-[25px] lg:w-[343px] lg:h-[475px] lg:rounded-[25px] object-cover" 
   />
 </div>
 

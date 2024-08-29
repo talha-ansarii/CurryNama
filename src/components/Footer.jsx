@@ -212,7 +212,7 @@ const Footer = () => {
       <div className="w-full bg-[#FAB700]">
         <div className="w-[87%] flex justify-between m-auto text-[#DA3D12] py-1 font-[400] text-[9px]">
           <div>Terms and Conditions & Privacy Policy</div>
-          <div>Copyright © 2024 Seven burger IN</div>
+        
         </div>
       </div>
     </div>

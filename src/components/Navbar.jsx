@@ -106,9 +106,9 @@ const Navbar = () => {
 
       <div>
         <div className='md:hidden relative lg:hidden flex w-[100%] px-[5%] m-auto justify-between items-center'>
-          <div>
+          <Link to={"/"} className='cursor-pointer'>
             <img src='/logo.png' alt='logo' className='w-[88px] h-[83px]' />
-          </div>
+          </Link>
           <div>
             {!isOpen ? (
               <button onClick={() => setIsOpen(true)}>
@@ -143,7 +143,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className='fixed md:hidden bg-[#1C6360] mt-[83px] h-[100vh] lg:hidden inset-0 z-[200] justify-evenly py-[80px] items-start pl-6 text-font-blue inter font-[700] text-[20px] flex flex-col gap-[32px]'
+              className='fixed md:hidden bg-[#1C6360] mt-[83px] h-[100vh] lg:hidden inset-0 z-[200] justify-evenly pb-[80px] items-start pl-6 text-font-blue inter font-[700] text-[20px] flex flex-col '
               initial='hidden'
               animate='visible'
               exit='hidden'
